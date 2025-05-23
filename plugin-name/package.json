@@ -1,0 +1,30 @@
+{
+  "name": "plugin-name",
+  "version": "1.0.0",
+  "description": "=== Plugin Name ===\r Contributors: Your Name <email@example.com>\r ",
+  "main": "index.js",
+  "scripts": {
+    "start": "wp-scripts start",
+    "dev": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@wordpress/scripts": "^30.15.0",
+    "autoprefixer": "^10.4.21",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss": "^8.5.3",
+    "postcss-loader": "^8.1.1",
+    "postcss-prefix-selector": "^2.1.1",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "@wordpress/data": "^10.23.0",
+    "@wordpress/icons": "^10.22.0"
+  }
+}
