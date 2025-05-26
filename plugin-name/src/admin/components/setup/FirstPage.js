@@ -3,7 +3,6 @@ import {
     Card, 
     CardBody, 
     Button, 
-    TextControl,
     SelectControl
 } from '@wordpress/components';
 import { useState, memo, useCallback } from '@wordpress/element';

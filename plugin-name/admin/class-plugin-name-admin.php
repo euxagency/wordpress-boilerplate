@@ -138,7 +138,7 @@ class Plugin_Name_Admin {
 	 * @since    1.0.0
 	 */
 	public function register_routes() {
-		// Sending otp.
+		// Saving setup data
 		register_rest_route(
 			'plugin-name/v1',
 			'/setup/save',
