@@ -1,0 +1,141 @@
+/* Tailwind css libraries */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/******************************************** Custom css ***********************************************/
+/* Custom label above inputs */
+.plugin-name-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Hide wp default labels */
+.components-base-control__label {
+  display: none !important;
+}
+
+/* Common input styling */
+.plugin-name-input .components-text-control__input  {
+  border: 1px solid #d1d5db !important;
+  border-radius: 0.375rem !important;
+  padding: 0.5rem ;
+  width: 100% !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  min-height: 46px !important;
+}
+.plugin-name-input .components-select-control__input {
+    border: 1px solid #d1d5db !important;
+  border-radius: 0.375rem !important;
+  padding: 0.5rem !important;
+  width: 100% !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  min-height: 46px !important;
+}
+.plugin-name-input .components-text-control__input:focus, .plugin-name-input .components-select-control__input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 1px #3b82f6 !important;
+  outline: none !important;
+}
+.plugin-name-input .components-select-control .components-input-control__backdrop {
+    border: 1px solid #d1d5db !important;
+}
+
+/* Password field */
+.password-input .components-text-control__input {
+  padding-right: 2.5rem;
+}
+
+/* Toggle control */
+.plugin-name-toggle
+  .components-form-toggle.is-checked
+  .components-form-toggle__track {
+  background-color: #3b82f6;
+}
+
+/* Button styling */
+.plugin-name-button {
+  background-color: #2563eb !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 1.5rem !important;
+  font-weight: 500 !important;
+  transition: background-color 0.2s !important;
+  justify-content: center !important;
+}
+.plugin-name-button:hover:not(:disabled) {
+  background-color: #1d4ed8 !important;
+}
+.plugin-name-button:disabled {
+  background-color: #93c5fd !important;
+  cursor: not-allowed !important;
+}
+
+/* Header, main content and footer */
+.plugin-name-header {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+.plugin-name-page-content, .plugin-name-footer-wrap {
+    background-color: #fff;
+    padding: 1.25rem;
+}
+.plugin-name-header .components-notice {
+    background-color: #f4a2a24a   !important;
+    border-left: 4px solid #d63638 !important;
+}
+
+/* Automation settings */
+.status-control .open-settings svg {
+    cursor: pointer;
+} 
+.plugin-name-header-card-body {
+    padding: 0 !important;
+}
+.plugin-name-status-wrap {
+    background-color: transparent;
+}
+
+
+
+/* Snackbar styles */
+
+/* Override WordPress Snackbar positioning to show at bottom-left */
+.plugin-name-snackbar {
+    position: fixed !important;
+    bottom: 32px !important; 
+    left: 160px !important; 
+    top: auto !important;
+    right: auto !important;
+    max-width: 320px !important;
+    margin: 8px !important;
+    z-index: 99999 !important;
+    transform: none !important;
+}
+
+/* Small screens */
+@media (max-width: 1023px) {
+  /* Fix automations settings message preview section */
+  .automation-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Make preview appear after template section */
+  .automation-layout > div:nth-child(2) {
+    order: 3;
+  }
+  /* Keep action buttons below template but above preview */
+  .automation-actions {
+    order: 2;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/**************************************** End of Custom css ********************************************/

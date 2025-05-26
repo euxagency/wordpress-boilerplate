@@ -1,0 +1,1097 @@
+/* Tailwind css libraries */
+.plugin-name-app *, .plugin-name-app ::before, .plugin-name-app ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+.plugin-name-app ::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+.plugin-name-app *,
+.plugin-name-app ::before,
+.plugin-name-app ::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+.plugin-name-app ::before,
+.plugin-name-app ::after {
+  --tw-content: '';
+}
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+.plugin-name-app,
+.plugin-name-app :host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+.plugin-name-app {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+.plugin-name-app hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+.plugin-name-app abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+/*
+Remove the default font size and weight for headings.
+*/
+.plugin-name-app h1,
+.plugin-name-app h2,
+.plugin-name-app h3,
+.plugin-name-app h4,
+.plugin-name-app h5,
+.plugin-name-app h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+.plugin-name-app a {
+  color: inherit;
+  text-decoration: inherit;
+}
+/*
+Add the correct font weight in Edge and Safari.
+*/
+.plugin-name-app b,
+.plugin-name-app strong {
+  font-weight: bolder;
+}
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+.plugin-name-app code,
+.plugin-name-app kbd,
+.plugin-name-app samp,
+.plugin-name-app pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+/*
+Add the correct font size in all browsers.
+*/
+.plugin-name-app small {
+  font-size: 80%;
+}
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+.plugin-name-app sub,
+.plugin-name-app sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.plugin-name-app sub {
+  bottom: -0.25em;
+}
+.plugin-name-app sup {
+  top: -0.5em;
+}
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+.plugin-name-app table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+.plugin-name-app button,
+.plugin-name-app input,
+.plugin-name-app optgroup,
+.plugin-name-app select,
+.plugin-name-app textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+.plugin-name-app button,
+.plugin-name-app select {
+  text-transform: none;
+}
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+.plugin-name-app button,
+.plugin-name-app input:where([type='button']),
+.plugin-name-app input:where([type='reset']),
+.plugin-name-app input:where([type='submit']) {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+.plugin-name-app :-moz-focusring {
+  outline: auto;
+}
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+.plugin-name-app :-moz-ui-invalid {
+  box-shadow: none;
+}
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+.plugin-name-app progress {
+  vertical-align: baseline;
+}
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+.plugin-name-app ::-webkit-inner-spin-button,
+.plugin-name-app ::-webkit-outer-spin-button {
+  height: auto;
+}
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+.plugin-name-app [type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+.plugin-name-app ::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+.plugin-name-app ::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+/*
+Add the correct display in Chrome and Safari.
+*/
+.plugin-name-app summary {
+  display: list-item;
+}
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+.plugin-name-app blockquote,
+.plugin-name-app dl,
+.plugin-name-app dd,
+.plugin-name-app h1,
+.plugin-name-app h2,
+.plugin-name-app h3,
+.plugin-name-app h4,
+.plugin-name-app h5,
+.plugin-name-app h6,
+.plugin-name-app hr,
+.plugin-name-app figure,
+.plugin-name-app p,
+.plugin-name-app pre {
+  margin: 0;
+}
+.plugin-name-app fieldset {
+  margin: 0;
+  padding: 0;
+}
+.plugin-name-app legend {
+  padding: 0;
+}
+.plugin-name-app ol,
+.plugin-name-app ul,
+.plugin-name-app menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*
+Reset default styling for dialogs.
+*/
+.plugin-name-app dialog {
+  padding: 0;
+}
+/*
+Prevent resizing textareas horizontally by default.
+*/
+.plugin-name-app textarea {
+  resize: vertical;
+}
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+.plugin-name-app input::-moz-placeholder, .plugin-name-app textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+.plugin-name-app input::placeholder,
+.plugin-name-app textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+/*
+Set the default cursor for buttons.
+*/
+.plugin-name-app button,
+.plugin-name-app [role="button"] {
+  cursor: pointer;
+}
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+.plugin-name-app :disabled {
+  cursor: default;
+}
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+.plugin-name-app img,
+.plugin-name-app svg,
+.plugin-name-app video,
+.plugin-name-app canvas,
+.plugin-name-app audio,
+.plugin-name-app iframe,
+.plugin-name-app embed,
+.plugin-name-app object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+.plugin-name-app img,
+.plugin-name-app video {
+  max-width: 100%;
+  height: auto;
+}
+/* Make elements with the HTML hidden attribute stay hidden by default */
+.plugin-name-app [hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+.plugin-name-app .container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .plugin-name-app .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .plugin-name-app .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .plugin-name-app .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .plugin-name-app .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .plugin-name-app .container {
+    max-width: 1536px;
+  }
+}
+.plugin-name-app .pointer-events-none {
+  pointer-events: none;
+}
+.plugin-name-app .absolute {
+  position: absolute;
+}
+.plugin-name-app .relative {
+  position: relative;
+}
+.plugin-name-app .z-10 {
+  z-index: 10;
+}
+.plugin-name-app .m-0 {
+  margin: 0px;
+}
+.plugin-name-app .-mx-4 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.plugin-name-app .mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.plugin-name-app .mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.plugin-name-app .my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.plugin-name-app .my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.plugin-name-app .mb-1 {
+  margin-bottom: 0.25rem;
+}
+.plugin-name-app .mb-2 {
+  margin-bottom: 0.5rem;
+}
+.plugin-name-app .mb-4 {
+  margin-bottom: 1rem;
+}
+.plugin-name-app .mb-6 {
+  margin-bottom: 1.5rem;
+}
+.plugin-name-app .mb-8 {
+  margin-bottom: 2rem;
+}
+.plugin-name-app .ml-1 {
+  margin-left: 0.25rem;
+}
+.plugin-name-app .ml-2 {
+  margin-left: 0.5rem;
+}
+.plugin-name-app .mr-1 {
+  margin-right: 0.25rem;
+}
+.plugin-name-app .mr-2 {
+  margin-right: 0.5rem;
+}
+.plugin-name-app .mr-4 {
+  margin-right: 1rem;
+}
+.plugin-name-app .mt-1 {
+  margin-top: 0.25rem;
+}
+.plugin-name-app .mt-12 {
+  margin-top: 3rem;
+}
+.plugin-name-app .mt-2 {
+  margin-top: 0.5rem;
+}
+.plugin-name-app .mt-8 {
+  margin-top: 2rem;
+}
+.plugin-name-app .block {
+  display: block;
+}
+.plugin-name-app .flex {
+  display: flex;
+}
+.plugin-name-app .inline-flex {
+  display: inline-flex;
+}
+.plugin-name-app .grid {
+  display: grid;
+}
+.plugin-name-app .hidden {
+  display: none;
+}
+.plugin-name-app .h-12 {
+  height: 3rem;
+}
+.plugin-name-app .h-3 {
+  height: 0.75rem;
+}
+.plugin-name-app .h-32 {
+  height: 8rem;
+}
+.plugin-name-app .h-4 {
+  height: 1rem;
+}
+.plugin-name-app .h-5 {
+  height: 1.25rem;
+}
+.plugin-name-app .h-6 {
+  height: 1.5rem;
+}
+.plugin-name-app .h-8 {
+  height: 2rem;
+}
+.plugin-name-app .h-px {
+  height: 1px;
+}
+.plugin-name-app .w-12 {
+  width: 3rem;
+}
+.plugin-name-app .w-16 {
+  width: 4rem;
+}
+.plugin-name-app .w-3 {
+  width: 0.75rem;
+}
+.plugin-name-app .w-4 {
+  width: 1rem;
+}
+.plugin-name-app .w-5 {
+  width: 1.25rem;
+}
+.plugin-name-app .w-8 {
+  width: 2rem;
+}
+.plugin-name-app .w-9 {
+  width: 2.25rem;
+}
+.plugin-name-app .w-\[3px\] {
+  width: 3px;
+}
+.plugin-name-app .w-full {
+  width: 100%;
+}
+.plugin-name-app .max-w-4xl {
+  max-width: 56rem;
+}
+.plugin-name-app .flex-1 {
+  flex: 1 1 0%;
+}
+.plugin-name-app .flex-shrink-0 {
+  flex-shrink: 0;
+}
+.plugin-name-app .transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+.plugin-name-app .animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.plugin-name-app .cursor-pointer {
+  cursor: pointer;
+}
+.plugin-name-app .grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.plugin-name-app .flex-col {
+  flex-direction: column;
+}
+.plugin-name-app .flex-wrap {
+  flex-wrap: wrap;
+}
+.plugin-name-app .items-start {
+  align-items: flex-start;
+}
+.plugin-name-app .items-center {
+  align-items: center;
+}
+.plugin-name-app .justify-start {
+  justify-content: flex-start;
+}
+.plugin-name-app .justify-center {
+  justify-content: center;
+}
+.plugin-name-app .justify-between {
+  justify-content: space-between;
+}
+.plugin-name-app .gap-1 {
+  gap: 0.25rem;
+}
+.plugin-name-app .gap-2 {
+  gap: 0.5rem;
+}
+.plugin-name-app .gap-3 {
+  gap: 0.75rem;
+}
+.plugin-name-app .gap-4 {
+  gap: 1rem;
+}
+.plugin-name-app .gap-\[12px\] {
+  gap: 12px;
+}
+.plugin-name-app .gap-\[2px\] {
+  gap: 2px;
+}
+.plugin-name-app .gap-\[2rem\] {
+  gap: 2rem;
+}
+.plugin-name-app .space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.plugin-name-app .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.plugin-name-app .self-stretch {
+  align-self: stretch;
+}
+.plugin-name-app .whitespace-nowrap {
+  white-space: nowrap;
+}
+.plugin-name-app .whitespace-pre-line {
+  white-space: pre-line;
+}
+.plugin-name-app .break-words {
+  overflow-wrap: break-word;
+}
+.plugin-name-app .rounded {
+  border-radius: 0.25rem;
+}
+.plugin-name-app .rounded-full {
+  border-radius: 9999px;
+}
+.plugin-name-app .rounded-lg {
+  border-radius: 0.5rem;
+}
+.plugin-name-app .rounded-md {
+  border-radius: 0.375rem;
+}
+.plugin-name-app .rounded-xl {
+  border-radius: 0.75rem;
+}
+.plugin-name-app .border {
+  border-width: 1px;
+}
+.plugin-name-app .border-0 {
+  border-width: 0px;
+}
+.plugin-name-app .border-t {
+  border-top-width: 1px;
+}
+.plugin-name-app .border-black\/\[0\.07\] {
+  border-color: rgb(0 0 0 / 0.07);
+}
+.plugin-name-app .border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+.plugin-name-app .border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+.plugin-name-app .bg-blue-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity, 1));
+}
+.plugin-name-app .bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+}
+.plugin-name-app .bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+}
+.plugin-name-app .bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
+.plugin-name-app .bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+.plugin-name-app .bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+}
+.plugin-name-app .bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+.plugin-name-app .bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
+}
+.plugin-name-app .bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
+.plugin-name-app .bg-transparent {
+  background-color: transparent;
+}
+.plugin-name-app .bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.plugin-name-app .bg-yellow-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
+}
+.plugin-name-app .p-0 {
+  padding: 0px;
+}
+.plugin-name-app .p-1 {
+  padding: 0.25rem;
+}
+.plugin-name-app .p-3 {
+  padding: 0.75rem;
+}
+.plugin-name-app .p-4 {
+  padding: 1rem;
+}
+.plugin-name-app .p-6 {
+  padding: 1.5rem;
+}
+.plugin-name-app .p-8 {
+  padding: 2rem;
+}
+.plugin-name-app .p-\[0\.75rem\] {
+  padding: 0.75rem;
+}
+.plugin-name-app .px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.plugin-name-app .px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.plugin-name-app .px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.plugin-name-app .py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.plugin-name-app .py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+.plugin-name-app .py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.plugin-name-app .py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.plugin-name-app .pr-4 {
+  padding-right: 1rem;
+}
+.plugin-name-app .pt-4 {
+  padding-top: 1rem;
+}
+.plugin-name-app .text-center {
+  text-align: center;
+}
+.plugin-name-app .text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.plugin-name-app .text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.plugin-name-app .text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.plugin-name-app .text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.plugin-name-app .text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.plugin-name-app .font-bold {
+  font-weight: 700;
+}
+.plugin-name-app .font-medium {
+  font-weight: 500;
+}
+.plugin-name-app .font-semibold {
+  font-weight: 600;
+}
+.plugin-name-app .text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
+}
+.plugin-name-app .text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity, 1));
+}
+.plugin-name-app .text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+.plugin-name-app .text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+.plugin-name-app .text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+.plugin-name-app .text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity, 1));
+}
+.plugin-name-app .text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+.plugin-name-app .text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.plugin-name-app .opacity-50 {
+  opacity: 0.5;
+}
+.plugin-name-app .shadow-none {
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.plugin-name-app .shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.plugin-name-app .transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.plugin-name-app .transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.plugin-name-app .ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+/******************************************** Custom css ***********************************************/
+/* Custom label above inputs */
+.plugin-name-app .plugin-name-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Hide wp default labels */
+.plugin-name-app .components-base-control__label {
+  display: none !important;
+}
+
+/* Common input styling */
+.plugin-name-app .plugin-name-input .components-text-control__input  {
+  border: 1px solid #d1d5db !important;
+  border-radius: 0.375rem !important;
+  padding: 0.5rem ;
+  width: 100% !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  min-height: 46px !important;
+}
+.plugin-name-app .plugin-name-input .components-select-control__input {
+    border: 1px solid #d1d5db !important;
+  border-radius: 0.375rem !important;
+  padding: 0.5rem !important;
+  width: 100% !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  min-height: 46px !important;
+}
+.plugin-name-app .plugin-name-input .components-text-control__input:focus, .plugin-name-app .plugin-name-input .components-select-control__input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 1px #3b82f6 !important;
+  outline: none !important;
+}
+.plugin-name-app .plugin-name-input .components-select-control .components-input-control__backdrop {
+    border: 1px solid #d1d5db !important;
+}
+
+/* Password field */
+.plugin-name-app .password-input .components-text-control__input {
+  padding-right: 2.5rem;
+}
+
+/* Toggle control */
+.plugin-name-app .plugin-name-toggle
+  .components-form-toggle.is-checked
+  .components-form-toggle__track {
+  background-color: #3b82f6;
+}
+
+/* Button styling */
+.plugin-name-app .plugin-name-button {
+  background-color: #2563eb !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 1.5rem !important;
+  font-weight: 500 !important;
+  transition: background-color 0.2s !important;
+  justify-content: center !important;
+}
+.plugin-name-app .plugin-name-button:hover:not(:disabled) {
+  background-color: #1d4ed8 !important;
+}
+.plugin-name-app .plugin-name-button:disabled {
+  background-color: #93c5fd !important;
+  cursor: not-allowed !important;
+}
+
+/* Header, main content and footer */
+.plugin-name-app .plugin-name-header {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+.plugin-name-app .plugin-name-page-content, .plugin-name-app .plugin-name-footer-wrap {
+    background-color: #fff;
+    padding: 1.25rem;
+}
+.plugin-name-app .plugin-name-header .components-notice {
+    background-color: #f4a2a24a   !important;
+    border-left: 4px solid #d63638 !important;
+}
+
+/* Automation settings */
+.plugin-name-app .status-control .open-settings svg {
+    cursor: pointer;
+} 
+.plugin-name-app .plugin-name-balance-card-body {
+    padding: 0.75rem !important;
+}
+.plugin-name-app .plugin-name-header-card-body {
+    padding: 0 !important;
+}
+.plugin-name-app .plugin-name-review-card {
+    background-color: #f0f3ff !important;
+}
+.plugin-name-app .plugin-name-status-wrap {
+    background-color: transparent;
+}
+
+/* General settings */
+.plugin-name-app .surcharge-dollar-sign {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+
+/* Snackbar styles */
+
+/* Override WordPress Snackbar positioning to show at bottom-left */
+.plugin-name-app .plugin-name-snackbar {
+    position: fixed !important;
+    bottom: 32px !important; 
+    left: 160px !important; 
+    top: auto !important;
+    right: auto !important;
+    max-width: 320px !important;
+    margin: 8px !important;
+    z-index: 99999 !important;
+    transform: none !important;
+}
+
+/* Small screens */
+@media (max-width: 1023px) {
+  /* Fix automations settings message preview section */
+  .plugin-name-app .automation-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Make preview appear after template section */
+  .plugin-name-app .automation-layout > div:nth-child(2) {
+    order: 3;
+  }
+  /* Keep action buttons below template but above preview */
+  .plugin-name-app .automation-actions {
+    order: 2;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/**************************************** End of Custom css ********************************************/
+
+.plugin-name-app .hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
+
+.plugin-name-app .hover\:text-gray-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+
+.plugin-name-app .hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+@media (min-width: 1024px) {
+  .plugin-name-app .lg\:w-1\/2 {
+    width: 50%;
+  }
+}
