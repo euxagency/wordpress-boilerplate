@@ -51,7 +51,7 @@ A modern WordPress plugin boilerplate that extends the [WordPress Plugin Boilerp
 
 ```bash
 cd wp-content/plugins
-git clone <your-repo-url> plugin-name
+git clone https://github.com/euxagency/wordpress-boilerplate.git
 cd plugin-name
 ```
 
