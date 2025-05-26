@@ -1,18 +1,16 @@
 import Header from './Header';
-import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div className='topsms-page-wrap'>
-        <div className='topsms-page-content'>
-          <div class='topsms-content-wrap'>
+      <div className='plugin-name-page-wrap'>
+        <div className='plugin-name-page-content'>
+          <div class='plugin-name-content-wrap'>
             {children} {/* This will change dynamically */}
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

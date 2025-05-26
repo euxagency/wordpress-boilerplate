@@ -77,21 +77,13 @@
   cursor: not-allowed !important;
 }
 
-/* Header, main content and footer */
+/* Header */
 .plugin-name-header {
     background-color: transparent !important;
     box-shadow: none !important;
 }
-.plugin-name-page-content, .plugin-name-footer-wrap {
-    background-color: #fff;
-    padding: 1.25rem;
-}
-.plugin-name-header .components-notice {
-    background-color: #f4a2a24a   !important;
-    border-left: 4px solid #d63638 !important;
-}
 
-/* Automation settings */
+/* Settings page */
 .status-control .open-settings svg {
     cursor: pointer;
 } 
@@ -105,7 +97,6 @@
 
 
 /* Snackbar styles */
-
 /* Override WordPress Snackbar positioning to show at bottom-left */
 .plugin-name-snackbar {
     position: fixed !important;
@@ -117,25 +108,6 @@
     margin: 8px !important;
     z-index: 99999 !important;
     transform: none !important;
-}
-
-/* Small screens */
-@media (max-width: 1023px) {
-  /* Fix automations settings message preview section */
-  .automation-layout {
-    display: flex;
-    flex-direction: column;
-  }
-  /* Make preview appear after template section */
-  .automation-layout > div:nth-child(2) {
-    order: 3;
-  }
-  /* Keep action buttons below template but above preview */
-  .automation-actions {
-    order: 2;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
 }
 
 /**************************************** End of Custom css ********************************************/

@@ -5,6 +5,7 @@ import { Snackbar } from '@wordpress/components';
 import Layout from './components/Layout';
 import Accordion from './settings/Accordion';
 import AccordionItem from './settings/AccordionItem';
+import TextAutoSave from './settings/TextAutoSave';
 
 const Settings = () => {
     // State for snackbar message
@@ -18,21 +19,18 @@ const Settings = () => {
             title: 'Processing',
             description: 'lorem ipsum dolor sit amet condecture',
             color: '#17a34a', 
-            defaultTemplate: "Lorem ipsum dolor sit amet consectetur. Arcu sed aliquam blandit ut magna nullam magna sagittis."
         },
         {
             key: 'completed',
             title: 'Completed',
             description: 'lorem ipsum dolor sit amet condecture',
             color: '#365aed', 
-            defaultTemplate: "Lorem ipsum dolor sit amet consectetur. Arcu sed aliquam blandit ut magna nullam magna sagittis."
         },
         {
             key: 'failed',
             title: 'Failed',
             description: 'lorem ipsum dolor sit amet condecture',
             color: '#ff3a44', 
-            defaultTemplate: "Lorem ipsum dolor sit amet consectetur. Arcu sed aliquam blandit ut magna nullam magna sagittis."
         },
     ];
 
@@ -98,24 +96,28 @@ const Settings = () => {
                     <div className='plugin-name-accordion-wrap flex flex-col gap-3 p-3 pr-4 w-full'>
                         {/* Map through the statuses array to create an Accordian and AccordianItem for each  status*/}
                         {statuses.map((status) => (
-                        <Accordion
-                            key={status.key}
-                            title={status.title}
-                            description={status.description}
-                            statusKey={status.key}
-                            statusColor={status.color}
-                            onSuccessMessage={handleSuccessMessage}
-                            onErrorMessage={handleErrorMessage}
-                        >
-                            <AccordionItem
-                                status={status.title} 
+                            <Accordion
+                                key={status.key}
+                                title={status.title}
+                                description={status.description}
                                 statusKey={status.key}
-                                defaultTemplate={status.defaultTemplate}
+                                statusColor={status.color}
                                 onSuccessMessage={handleSuccessMessage}
                                 onErrorMessage={handleErrorMessage}
-                            />
-                        </Accordion>
+                            >
+                                <AccordionItem
+                                    status={status.title} 
+                                    statusKey={status.key}
+                                    onSuccessMessage={handleSuccessMessage}
+                                    onErrorMessage={handleErrorMessage}
+                                />
+                            </Accordion>
                         ))}
+
+                        <TextAutoSave 
+                            onSuccessMessage={handleSuccessMessage}
+                            onErrorMessage={handleErrorMessage}
+                        />
                     </div>
                 </div>
             </div>

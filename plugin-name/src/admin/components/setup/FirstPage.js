@@ -9,6 +9,7 @@ import {
 import { useState, memo, useCallback } from '@wordpress/element';
 
 import StepIndicator from './StepIndicator.js';
+import CustomInput from '../components/CustomInput.js';
 
 // Select options
 const TYPES = [
@@ -19,24 +20,7 @@ const TYPES = [
 ];
 
 // Memoize the CustomInput to prevent unnecessary re-renders
-const CustomInput = memo(({ label, description, value, onChange, error, ...props }) => (
-    <div className="mb-4">
-        <div className="plugin-name-label">
-            {label}
-            {description && (
-                <span className="text-xs text-gray-500 ml-2">{description}</span>
-            )}
-        </div>
-        <div className="plugin-name-input">
-            <TextControl
-                label=""
-                value={value}
-                onChange={onChange}
-                {...props}
-            />
-        </div>
-    </div>
-));
+const CustomInput_ = memo(CustomInput);
 
 // Memoize the CustomSelect to prevent unnecessary re-renders
 const CustomSelect = memo(({ label, value, options, onChange, error, ...props }) => (
@@ -153,7 +137,7 @@ const FirstPage = ({ onComplete }) => {
                 
                 <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-2 gap-4">
-                        <CustomInput
+                        <CustomInput_
                             key="username-field"
                             label={__('Username', 'plugin-name')}
                             description={__('Max 11 characters', 'plugin-name')}
@@ -164,7 +148,7 @@ const FirstPage = ({ onComplete }) => {
                             required
                         />
                         
-                        <CustomInput
+                        <CustomInput_
                             key="password-field"
                             label={__('Password', 'plugin-name')}
                             placeholder={__('Password', 'plugin-name')}

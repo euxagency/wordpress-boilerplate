@@ -1,6 +1,7 @@
 import { __ } from '@wordpress/i18n';
 import { useState } from '@wordpress/element';
 
+import Layout from './components/Layout';
 import FirstPage from './setup/FirstPage';
 import SecondPage from './setup/SecondPage'; 
 
@@ -15,15 +16,17 @@ const Setup = () => {
     };
 
     return (
-        <div className="plugin-name-app">
-            {currentStep === 'firstPage' && (
-                <FirstPage onComplete={handleStepComplete} />
-            )}
-            
-            {currentStep === 'secondPage' && (
-                <SecondPage onComplete={handleStepComplete} />
-            )}
-        </div>
+        <Layout>
+            <div>
+                {currentStep === 'firstPage' && (
+                    <FirstPage onComplete={handleStepComplete} />
+                )}
+                
+                {currentStep === 'secondPage' && (
+                    <SecondPage onComplete={handleStepComplete} />
+                )}
+            </div>
+        </Layout>
     );
 };
 

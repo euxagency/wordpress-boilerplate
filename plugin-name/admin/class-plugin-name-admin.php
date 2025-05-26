@@ -88,10 +88,10 @@ class Plugin_Name_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Topsms_Loader as all of the hooks are defined
+		 * defined in Plugin_Name_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Topsms_Loader will then create the relationship
+		 * The Plugin_Name_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -152,122 +152,70 @@ class Plugin_Name_Admin {
 			)
 		);
 
-		// // Verifying otp.
-		// register_rest_route(
-		// 	'topsms/v1',
-		// 	'/verify-otp',
-		// 	array(
-		// 		'methods'             => 'POST',
-		// 		'callback'            => array( $this->rest_api, 'topsms_verify_otp' ),
-		// 		'permission_callback' => function () {
-		// 			return current_user_can( 'manage_options' );
-		// 		},
-		// 	)
-		// );
+		// Fetching status settings.
+		register_rest_route(
+			'plugin-name/v1',
+			'/settings/status/(?P<status_key>[a-zA-Z0-9_-]+)',
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( $this->rest_api, 'get_status_settings' ),
+				'permission_callback' => function () {
+					return current_user_can( 'manage_options' );
+				},
+			)
+		);
 
-		// // Fetching automations status settings.
-		// register_rest_route(
-		// 	'topsms/v1',
-		// 	'/automations/status/(?P<status_key>[a-zA-Z0-9_-]+)',
-		// 	array(
-		// 		'methods'             => 'GET',
-		// 		'callback'            => array( $this->rest_api, 'topsms_get_automations_status_settings' ),
-		// 		'permission_callback' => function () {
-		// 			return current_user_can( 'manage_options' );
-		// 		},
-		// 	)
-		// );
+		// Saving status enabled (toggle) setting.
+		register_rest_route(
+			'plugin-name/v1',
+			'/settings/status/save',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( $this->rest_api, 'save_status_enabled' ),
+				'permission_callback' => function () {
+					return current_user_can( 'manage_options' );
+				},
+			)
+		);
 
-		// // Saving automations status enabled setting.
-		// register_rest_route(
-		// 	'topsms/v1',
-		// 	'/automations/status/save',
-		// 	array(
-		// 		'methods'             => 'POST',
-		// 		'callback'            => array( $this->rest_api, 'topsms_save_automations_status_enabled' ),
-		// 		'permission_callback' => function () {
-		// 			return current_user_can( 'manage_options' );
-		// 		},
-		// 	)
-		// );
+		// Saving status message (text area).
+		register_rest_route(
+			'plugin-name/v1',
+			'/settings/status/save-message',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( $this->rest_api, 'save_status_message' ),
+				'permission_callback' => function () {
+					return current_user_can( 'manage_options' );
+				},
+			)
+		);
 
-		// // Saving automations status template.
-		// register_rest_route(
-		// 	'topsms/v1',
-		// 	'/automations/status/save-template',
-		// 	array(
-		// 		'methods'             => 'POST',
-		// 		'callback'            => array( $this->rest_api, 'topsms_save_automations_status_template' ),
-		// 		'permission_callback' => function () {
-		// 			return current_user_can( 'manage_options' );
-		// 		},
-		// 	)
-		// );
+		// Fetching input (e.g. username).
+		register_rest_route(
+			'plugin-name/v1',
+			'/settings/(?P<key>[a-zA-Z0-9_-]+)',
+			array(
+				'methods'             => 'GET',
+				'callback'            => array( $this->rest_api, 'fetch_input' ),
+				'permission_callback' => function () {
+					return current_user_can( 'manage_options' );
+				},
+			)
+		);
 
-		// // Fetching settings (general).
-		// register_rest_route(
-		// 	'topsms/v1',
-		// 	'/settings/(?P<key>[a-zA-Z0-9_-]+)',
-		// 	array(
-		// 		'methods'             => 'GET',
-		// 		'callback'            => array( $this->rest_api, 'topsms_get_settings' ),
-		// 		'permission_callback' => function () {
-		// 			return current_user_can( 'manage_options' );
-		// 		},
-		// 	)
-		// );
-
-		// // Saving settings (general).
-		// register_rest_route(
-		// 	'topsms/v1',
-		// 	'/settings/save',
-		// 	array(
-		// 		'methods'             => 'POST',
-		// 		'callback'            => array( $this->rest_api, 'topsms_save_settings' ),
-		// 		'permission_callback' => function () {
-		// 			return current_user_can( 'manage_options' );
-		// 		},
-		// 	)
-		// );
-
-		// // Saving input fields for general settings.
-		// register_rest_route(
-		// 	'topsms/v1',
-		// 	'/settings/save-surcharge',
-		// 	array(
-		// 		'methods'             => 'POST',
-		// 		'callback'            => array( $this->rest_api, 'topsms_save_settings_' ),
-		// 		'permission_callback' => function () {
-		// 			return current_user_can( 'manage_options' );
-		// 		},
-		// 	)
-		// );
-
-		// // Saving input fields for general settings.
-		// register_rest_route(
-		// 	'topsms/v1',
-		// 	'/settings/save-input',
-		// 	array(
-		// 		'methods'             => 'POST',
-		// 		'callback'            => array( $this->rest_api, 'topsms_save_settings_' ),
-		// 		'permission_callback' => function () {
-		// 			return current_user_can( 'manage_options' );
-		// 		},
-		// 	)
-		// );
-
-		// // Get user data.
-		// register_rest_route(
-		// 	'topsms/v1',
-		// 	'/user',
-		// 	array(
-		// 		'methods'             => 'GET',
-		// 		'callback'            => array( $this->rest_api, 'topsms_get_user_data' ),
-		// 		'permission_callback' => function () {
-		// 			return current_user_can( 'manage_options' );
-		// 		},
-		// 	)
-		// );
+		// Saving input fields for general settings.
+		register_rest_route(
+			'plugin-name/v1',
+			'/settings/save-input',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( $this->rest_api, 'save_input' ),
+				'permission_callback' => function () {
+					return current_user_can( 'manage_options' );
+				},
+			)
+		);
 	}
 
 	/**

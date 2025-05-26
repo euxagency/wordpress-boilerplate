@@ -3,5 +3,5 @@
  *
  * Silence is golden
  *
- * @package    Topsms
+ * @package    Plugin_Name
  * */

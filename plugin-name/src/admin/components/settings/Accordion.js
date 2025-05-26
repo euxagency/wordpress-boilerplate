@@ -114,7 +114,6 @@ const Accordion = ({ title, description, statusKey, statusColor, children, onSuc
                 status_key: statusKey,
                 enabled: isEnabled
             };
-            // console.log(`Saving ${statusKey} enabled setting:`, sendData);
 
             // Save status enabled option to backend
             const response = await fetch('/wp-json/plugin-name/v1/settings/status/save', {
