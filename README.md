@@ -279,29 +279,29 @@ The callback function are implemented in the REST API admin class (`admin/class-
 
 ```php
 public function save_setup_settings( WP_REST_Request $request ) {
-        // Get the sent data (from frontend).
-		$body_params = $request->get_json_params();
-        $data = $body_params['payload'];
+    // Get the sent data (from frontend).
+    $body_params = $request->get_json_params();
+    $data = $body_params['payload'];
 
-        $username = isset( $data['username'] ) ? $data['username'] : '';
-        $password = isset( $data['password'] ) ? $data['password'] : '';
-        $type = isset( $data['type'] ) ? $data['type'] : '';
+    $username = isset( $data['username'] ) ? $data['username'] : '';
+    $password = isset( $data['password'] ) ? $data['password'] : '';
+    $type = isset( $data['type'] ) ? $data['type'] : '';
 
-		// Save the data to the options.
-		update_option( 'plugin_name_username', $username );
-        update_option( 'plugin_name_password', $password );
-        update_option( 'plugin_name_type', $type );
+    // Save the data to the options.
+    update_option( 'plugin_name_username', $username );
+    update_option( 'plugin_name_password', $password );
+    update_option( 'plugin_name_type', $type );
 
-		return new WP_REST_Response(
-			array(
-				'success' => true,
-				'data'    => array(
-					'message'    => 'Setup settings saved successfully',
-				),
-			),
-			200
-		);
-	}
+    return new WP_REST_Response(
+        array(
+            'success' => true,
+            'data'    => array(
+                'message'    => 'Setup settings saved successfully',
+            ),
+        ),
+        200
+    );
+}
 ```
 
 ### Frontend-Server Communication
@@ -312,48 +312,48 @@ React components make secure API calls using WordPress nonces:
 
 ```js
 // Make request to the server to save settings
-    const saveSettings = useCallback(async () => {
-        setIsSaving(true);
-        
-        try {
-            // Get the nonce from WordPress
-            const nonce = window.wpApiSettings?.nonce;
-            if (!nonce) {
-                console.error('WordPress REST API nonce not available');
-                return;
-            }
-
-            // Form data 
-            const newData = {
-                username: formData.username,
-                password: formData.password,
-                type: formData.type || '',
-            };
-            // Data to send 
-            const sendData = {
-                payload: newData
-            }
+const saveSettings = useCallback(async () => {
+    setIsSaving(true);
     
-            const response = await fetch("/wp-json/plugin-name/v1/setup/save", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-WP-Nonce': nonce,
-                },
-                body: JSON.stringify(sendData)
-            });
-            
-            const data = await response.json();
-            
-            if (!data.success) {
-                throw new Error(data.data.message || 'Unknown error');
-            }
-        } catch (err) {
-            console.error(`Failed to save data: ${err.message || 'Unknown error'}`);
-        } finally {
-            setIsSaving(false);
+    try {
+        // Get the nonce from WordPress
+        const nonce = window.wpApiSettings?.nonce;
+        if (!nonce) {
+            console.error('WordPress REST API nonce not available');
+            return;
         }
-    }, [formData]);
+
+        // Form data 
+        const newData = {
+            username: formData.username,
+            password: formData.password,
+            type: formData.type || '',
+        };
+        // Data to send 
+        const sendData = {
+            payload: newData
+        }
+
+        const response = await fetch("/wp-json/plugin-name/v1/setup/save", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-WP-Nonce': nonce,
+            },
+            body: JSON.stringify(sendData)
+        });
+        
+        const data = await response.json();
+        
+        if (!data.success) {
+            throw new Error(data.data.message || 'Unknown error');
+        }
+    } catch (err) {
+        console.error(`Failed to save data: ${err.message || 'Unknown error'}`);
+    } finally {
+        setIsSaving(false);
+    }
+}, [formData]);
 ```
 
 #### WordPress Nonces Logic
