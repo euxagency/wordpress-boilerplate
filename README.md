@@ -205,7 +205,7 @@ public function display_setup_page() {
 
 #### Style Scoping with PostCSS
 
-To prevent Tailwind CSS styles from affecting other WordPress admin elements, the plugin uses PostCSS to scope all styles to the .plugin-name-app class:
+To prevent Tailwind CSS styles from affecting other WordPress admin elements, the plugin uses PostCSS to scope all styles to the `.plugin-name-app` class:
 
 ```js
 // postcss.config.js
