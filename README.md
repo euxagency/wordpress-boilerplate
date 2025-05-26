@@ -51,8 +51,8 @@ A modern WordPress plugin boilerplate that extends the [WordPress Plugin Boilerp
 
 ```bash
 cd wp-content/plugins
-git clone <your-repo-url> your-plugin-name
-cd your-plugin-name
+git clone <your-repo-url> plugin-name
+cd plugin-name
 ```
 
 ### Step 2: Global Find and Replace
