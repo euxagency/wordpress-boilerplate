@@ -33,9 +33,28 @@ A modern WordPress plugin boilerplate that extends the [WordPress Plugin Boilerp
       - [React to WordPress API Calls](#react-to-wordpress-api-calls)
       - [WordPress Nonces Logic](#wordpress-nonces-logic)
       - [Extending the Plugin](#extending-the-plugin)
-  - [Troubleshooting](#troubleshooting)
+  - [React Components](#react-components)
+    - [Layout Component](#layout-component)
+    - [Header Component](#header-component)
+    - [CustomInput Component](#custominput-component)
+      - [Key Features](#key-features)
+    - [StepIndicator Component](#stepindicator-component)
+      - [Key Features](#key-features-1)
+    - [Accordian Component](#accordian-component)
+      - [Key Features](#key-features-2)
+    - [AccordianItem Component](#accordianitem-component)
+      - [Key Features](#key-features-3)
+    - [TextAutoSave.js](#textautosavejs)
+      - [Key Features](#key-features-4)
+    - [Default WordPress Components](#default-wordpress-components)
+      - [`Card`](#card)
+      - [`Flex`](#flex)
+      - [`Button`](#button)
+      - [`TextControl`](#textcontrol)
+      - [`SelectControl`](#selectcontrol)
+      - [`Snackbar`](#snackbar)
+      - [`Text`](#text)
   - [Credits](#credits)
-  - [Support](#support)
 
 ## Features
 
@@ -95,10 +114,10 @@ npm run build
 ### Development Commands
 
 ```bash
-# Start development mode with file watching
+# Start development mode with file watching.
 npm run dev
 
-# Build for production
+# Build for production.
 npm run build
 ```
 
@@ -155,7 +174,7 @@ The plugin connects WordPress with React through proper asset enqueuing and cont
 #### Enqueuing Scripts and Styles
 
 ```php
-// Enqueue styles including WordPress components
+// Enqueue styles including WordPress components.
 wp_enqueue_style( 
    $this->plugin_name . '-admin-app-style', 
    plugin_dir_url( __FILE__ ) . 'css/plugin-name-admin-app.css', 
@@ -165,22 +184,22 @@ wp_enqueue_style(
 );
 wp_enqueue_style( 'wp-components' );
 
-// Enqueue scripts with WordPress React dependencies
+// Enqueue scripts with WordPress React dependencies.
 wp_enqueue_script(
    $this->plugin_name . '-admin-app',
    plugin_dir_url( __FILE__ ) . 'js/plugin-name-admin-app.js',
    array(
-       'wp-element',      // React and ReactDOM
-       'wp-components',   // WordPress UI components
-       'wp-i18n',         // Internationalization
-       'wp-data',         // State management
-       'wp-api-fetch',    // API utilities
+       'wp-element',      // React and ReactDOM.
+       'wp-components',   // WordPress UI components.
+       'wp-i18n',         // Internationalization.
+       'wp-data',         // State management.
+       'wp-api-fetch',    // API utilities.
    ),
    time(),
    true
 );
 
-// Provide REST API settings for nonce to JavaScript
+// Provide REST API settings for nonce to JavaScript.
 wp_localize_script(
    'wp-api',
    'wpApiSettings',
@@ -208,7 +227,7 @@ public function display_setup_page() {
 To prevent Tailwind CSS styles from affecting other WordPress admin elements, the plugin uses PostCSS to scope all styles to the `.plugin-name-app` class:
 
 ```js
-// postcss.config.js
+// postcss.config.js.
 module.exports = {
   plugins: [
     require('postcss-prefix-selector')({
@@ -240,7 +259,7 @@ import Settings from './components/Settings';
 
 import './css/plugin-name-admin-app.css';
 
-// Render the app when DOM is ready
+// Render the app when DOM is ready.
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('plugin-name-admin-setup');
   if (container) {
@@ -258,7 +277,7 @@ Build components in the `src/admin/components` folder by utilising WordPress's R
 REST endpoints are registered in the admin class (`admin/class-plugin-name-admin.php`):
 
 ```php
-// Saving setup data
+// Saving setup data.
 register_rest_route(
     'plugin-name/v1',
     '/setup/save',
@@ -311,25 +330,25 @@ public function save_setup_settings( WP_REST_Request $request ) {
 React components make secure API calls using WordPress nonces:
 
 ```js
-// Make request to the server to save settings
+// Make request to the server to save settings.
 const saveSettings = useCallback(async () => {
     setIsSaving(true);
     
     try {
-        // Get the nonce from WordPress
+        // Get the nonce from WordPress.
         const nonce = window.wpApiSettings?.nonce;
         if (!nonce) {
             console.error('WordPress REST API nonce not available');
             return;
         }
 
-        // Form data 
+        // Form data.
         const newData = {
             username: formData.username,
             password: formData.password,
             type: formData.type || '',
         };
-        // Data to send 
+        // Data to send .
         const sendData = {
             payload: newData
         }
@@ -370,9 +389,117 @@ const saveSettings = useCallback(async () => {
 2. REST endpoints can be defined in `admin/class-plugin-name-admin.php`.
 3. Callback functions can be defined in `admin/class-plugin-name-rest-api-admin.php`.
 
-## Troubleshooting
+## React Components
+
+These custom components can be found in the `src/admin` folder.
+
+### Layout Component
+
+File Path: `components/Layout.js`
+
+The Layout component is a wrapper that defines the consistent structure of the plugin page. It includes a global Header and wraps the page's dynamic content with styling containers.
+
+### Header Component
+
+File Path: `components/Header.js`
+
+Displays a styled header for the plugin page, including the plugin icon, name, and a short description. 
+
+### CustomInput Component
+
+File Path: `components/CustomInput.js`
+
+A reusable wrapper around the WordPress `TextControl` component that applies consistent styling and optionally includes a description.
+
+#### Key Features
+
+1. **Custom-Styled Input Field**: Fully stylable and consistent with your plugin or theme design, supporting tailored fonts, colors, and spacing.
+
+### StepIndicator Component
+
+File Path: `setup/StepIndicator.js`
+
+The `StepIndicator` component is a visual progress tracker used to indicate the current step within a multi-step process. It renders a horizontal list of steps, highlighting the active one and connecting them visually with lines.
+
+#### Key Features
+
+1. **Step Tracking**: Clearly indicates the current step in a multi-step process, helping users understand their progress.
+2. **Progress Visualization**: Supports horizontal or vertical layouts with visual cues (e.g., numbered circles, lines, icons) showing completed, active, and upcoming steps.
+3. **Custom Labels & Icons**: Allows each step to have a custom label and/or icon for better contextual understanding.
+
+### Accordian Component
+
+File Path: `settings/Accordian.js`
+
+A collapsible UI section used for toggling plugin feature settings, which displays a toggle switch and a settings icon to expand/collapse additional options.
+
+#### Key Features
+
+1. **ToggleControl**: Allows enabling/disabling a feature.
+2. **Animated Accordion**: Opens smoothly with animated height transitions.
+3. **Settings Cog with Hover Animation**: Includes an animated settings icon that rotates on hover and opens the accordion when enabled.
+4. **Disabled State Handling**: Accordion and settings cog are visually dimmed and interaction-disabled when the section is toggled off.
+5. **Success & Error Callback Support**: Sends success or error messages back to parent components via `onSuccessMessage` and `onErrorMessage` props.
+6. **Loading State for Toggle**: Displays a loading skeleton pulse while fetching the initial toggle status from the backend.
+
+### AccordianItem Component
+
+File Path: `settings/AccordianItem.js`
+
+A modular, reusable settings block designed for WordPress admin panels that allows users to view, edit, and save customizable status messages loading states, and error handling.
+
+#### Key Features
+
+1. **Customizable Status Message Panel**: Allows users to edit and save status-based messages dynamically tied to a statusKey.
+2. **Built-in Save Feedback**: Displays visual indicators like loading state and disabled buttons while saving to enhance user experience.
+3. **Success & Error Callback Support**: Sends success or error messages back to parent components via `onSuccessMessage` and `onErrorMessage` props.
+4. **Accessible Textarea Input**: Large, easy-to-use text area with consistent styling for accessibility and ease of editing long messages.
+5. **Reusable Across Settings Tabs**: Designed to be dropped into accordion/tabbed settings structures for modular admin UI development.
+
+### TextAutoSave.js
+
+It provides a user-friendly text input field with automatic save functionality on blur. 
+
+#### Key Features
+
+1. **Auto-Save on Blur**: Automatically saves the input value to the backend when the user finishes editing and moves focus away.
+2. **Fetch Initial Value from Backend**: Loads the current value from the WordPress REST API on component mount.
+3. **Loading State with Skeleton Placeholder**: Displays a loading skeleton with a gray placeholder while fetching data for better user experience.
+4. **Input Validation Support**: Restricts input length to 11 characters with a clear label and description.
+
+### Default WordPress Components
+
+Some useful WordPress components that can be reused to build rich and consistent UI include:
+
+#### `Card`
+
+A container component that groups related content together with a clean, elevated style. Ideal for panels, settings sections, or grouped controls.
+
+#### `Flex`
+
+A flexible layout container using CSS flexbox. It helps align and distribute space among child elements in a responsive and adaptable way.
+
+#### `Button`
+
+A standard clickable button with various styles and states (primary, secondary, disabled, busy). Used to trigger actions or submit forms.
+
+#### `TextControl`
+
+A controlled text input component with label, help text, and validation support. 
+
+#### `SelectControl`
+
+A dropdown select input that allows users to pick from a list of options.
+
+#### `Snackbar`
+
+A transient notification popup used to display brief messages such as success, warning, or error alerts. 
+
+#### `Text`
+
+A simple text component for displaying styled, accessible text content with consistent typography and spacing.
+
+For more detailed information and usage examples, please refer to the official WordPress Block [Editor Component documentation](https://developer.wordpress.org/block-editor/reference-guides/components/).
 
 ## Credits
 Based on the [WordPress Plugin Boilerplate](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate) by DevinVinson.
-
-## Support

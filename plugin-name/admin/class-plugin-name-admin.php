@@ -111,6 +111,7 @@ class Plugin_Name_Admin {
 			true
 		);
 
+        // Provide REST API settings for nonce to JavaScript.
 		wp_localize_script(
 			'wp-api',
 			'wpApiSettings',

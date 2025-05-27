@@ -869,18 +869,10 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
   cursor: not-allowed !important;
 }
 
-/* Header, main content and footer */
+/* Header */
 .plugin-name-app .plugin-name-header {
     background-color: transparent !important;
     box-shadow: none !important;
-}
-.plugin-name-app .plugin-name-page-content, .plugin-name-app .plugin-name-footer-wrap {
-    background-color: #fff;
-    padding: 1.25rem;
-}
-.plugin-name-app .plugin-name-header .components-notice {
-    background-color: #f4a2a24a   !important;
-    border-left: 4px solid #d63638 !important;
 }
 
 /* Settings page */

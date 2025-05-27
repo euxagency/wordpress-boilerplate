@@ -130,6 +130,7 @@ const TextAutoSave = ({ onSuccessMessage, onErrorMessage }) => {
                         placeholder={__('Username', 'plugin-name')}
                         value={username}
                         onBlur={handleUsernameBlur}
+                        onChange={SetUsername}
                         maxLength={11}
                     />
                 </div>
